@@ -1,0 +1,39 @@
+{
+  "grove": 1,
+  "id": "chat.mango.grove.tus-uploader",
+  "name": "TUS Uploader",
+  "version": "0.2.2",
+  "description": "A configurable headless TUS upload provider for Mango.",
+  "author": {
+    "name": "Mango",
+    "url": "https://mangoirc.chat"
+  },
+  "readme": "README.md",
+  "entry": "index.html",
+  "settings": "settings.html",
+  "presentation": {
+    "surfaces": [
+      "headless"
+    ],
+    "scope": "application"
+  },
+  "contributions": {
+    "uploadProviders": [
+      {
+        "id": "tus",
+        "name": "TUS",
+        "kind": "userConfigured",
+        "acceptsImagesOnly": false,
+        "maxFileSize": 1073741824
+      }
+    ]
+  },
+  "capabilities": [
+    "uploads.provide",
+    "storage",
+    "storage.secure"
+  ],
+  "hostPermissions": [
+    "https://*"
+  ]
+}

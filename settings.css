@@ -1,0 +1,64 @@
+:root {
+  color-scheme: light dark;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: transparent;
+  color: var(--grove-text, CanvasText);
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; background: transparent; }
+
+main { padding: 20px; }
+
+form { display: grid; gap: 20px; }
+
+section { display: grid; gap: 8px; }
+
+h1, h2, p { margin: 0; }
+
+h1, h2 { font-size: 15px; }
+
+p, label, input, button { font-size: 13px; }
+
+label { font-weight: 600; margin-top: 4px; }
+
+input {
+  width: 100%;
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid var(--grove-hairline-strong, color-mix(in srgb, CanvasText 22%, transparent));
+  border-radius: 7px;
+  background: var(--grove-bg, Field);
+  color: inherit;
+}
+
+input:focus {
+  outline: 2px solid var(--grove-accent, Highlight);
+  outline-offset: 1px;
+}
+
+.secret-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; }
+
+.help { color: var(--grove-text-secondary, GrayText); line-height: 1.35; }
+
+.actions { display: flex; justify-content: flex-end; gap: 8px; }
+
+button {
+  padding: 7px 14px;
+  border: 0;
+  border-radius: 7px;
+  background: var(--grove-accent, Highlight);
+  color: white;
+  font-weight: 600;
+}
+
+button.secondary {
+  border: 1px solid var(--grove-hairline-strong, color-mix(in srgb, CanvasText 22%, transparent));
+  background: var(--grove-surface-strong, ButtonFace);
+  color: inherit;
+}
+
+button:disabled { opacity: 0.55; }
+
+#status { min-height: 18px; color: var(--grove-text-secondary, GrayText); }
